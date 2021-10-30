@@ -1,0 +1,9 @@
+.service {
+    margin: 10px;
+    border: 2px solid gray;
+    max-width: 400px;
+}
+
+.service-text {
+    margin: 10px;
+}

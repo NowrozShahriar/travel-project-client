@@ -1,0 +1,45 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0px 0px 10px 5px rgba(127, 127, 127, 0.150);
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.932);
+}
+
+.header nav {
+    display: flex;
+}
+
+.header a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: rgb(56, 64, 72);
+}
+
+.header a:hover {
+    text-decoration: underline;
+}
+
+.header h2 {
+    margin: 2px;
+}
+
+.sign-in {
+    color: rgb(56, 64, 72);
+    border: none;
+    background-color: transparent;
+    font-size: small;
+    font-weight: 400;
+}
+
+button.sign-in:hover {
+    text-decoration: underline;
+}
+
+.user-img {
+    border-radius: 50%;
+    width: 2rem;
+}
