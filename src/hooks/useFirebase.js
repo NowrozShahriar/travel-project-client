@@ -11,6 +11,11 @@ const useFirebase = () => {
     const auth = getAuth();
     const provider = new GoogleAuthProvider();
 
+    const signIn = () => {
+        signInWithPopup(auth, provider)
+            .catch(() => console.log('Canceled'));
+    }
+
     const signInWithGoogle = () => {
         return signInWithPopup(auth, provider);
     };
@@ -35,6 +40,7 @@ const useFirebase = () => {
 
     return {
         user,
+        signIn,
         signInWithGoogle,
         logOut
     };

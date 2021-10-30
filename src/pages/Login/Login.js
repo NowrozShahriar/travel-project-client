@@ -10,7 +10,7 @@ const Login = () => {
 
     const handleSignIn = () => {
         signInWithGoogle()
-            .then(result => {
+            .then(() => {
                 history.push(redirect_uri);
             })
             .catch(() => console.log('Canceled'));

@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import './App.css';
 import Header from './pages/Shared/Header/Header';
 import Main from './pages/home/Main/Main';
@@ -30,11 +30,11 @@ function App() {
             <PrivateRoute path="/add-service">
               <AddService></AddService>
             </PrivateRoute>
-            <PrivateRoute path="/place-order">
+            <PrivateRoute path="/place-order/:id">
               <PlaceOrder></PlaceOrder>
             </PrivateRoute>
             <Route path="/login">
-              <Login></Login>
+              <Login/>
             </Route>
             <Route path="*">
               <NotFound/>
