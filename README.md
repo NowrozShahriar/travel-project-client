@@ -1,6 +1,6 @@
 # Good Travel
 
-Visit [Good Travel](https://https://good-travel-d1e69.web.app/)
+Visit [Good Travel](https://good-travel-d1e69.web.app/)
 
 - Good Travel is a travel agency for Adventurers.
 
