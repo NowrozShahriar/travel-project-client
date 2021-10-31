@@ -10,6 +10,7 @@ import AuthProvider from './contexts/AuthProvider';
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder';
 import PrivateRoute from './pages/Shared/PrivateRoute/PrivateRoute';
 import Login from './pages/Login/Login';
+import Footer from './pages/Shared/Footer/Footer';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
               <NotFound/>
             </Route>
           </Switch>
+          <Footer></Footer>
         </Router>
       </AuthProvider>
     </div>
