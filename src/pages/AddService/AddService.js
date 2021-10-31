@@ -6,7 +6,7 @@ import './AddService.css';
 function AddService() {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        axios.post('http://localhost:5000/services', data)
+        axios.post('https://arcane-bayou-05771.herokuapp.com/services', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Added a new service.');

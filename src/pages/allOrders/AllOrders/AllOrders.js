@@ -9,7 +9,7 @@ function AllOrders() {
     const {services} = useServices();
 
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://arcane-bayou-05771.herokuapp.com/orders')
         .then(res => res.json())
         .then(data => setAllOrders(data))
     }, [])
@@ -28,11 +28,6 @@ function AllOrders() {
             <h2>All Orders</h2>
             <div className="orders">
             {
-                // myOrders.map(order => <MyOrder
-                //     key={order._id} 
-                //     service={order} 
-                //     orders={orders} 
-                //     ></MyOrder>)
                 orderedServices.map(order => <Order 
                     key={order._id} 
                     service={order}

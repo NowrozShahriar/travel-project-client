@@ -9,7 +9,7 @@ function MyOrder({service, orders}) {
     function cancelTrip() {
         let cancel = window.confirm('Cancel this trip?');
         if (cancel) {
-            fetch(`http://localhost:5000/orders/${order._id}`, {
+            fetch(`https://arcane-bayou-05771.herokuapp.com/orders/${order._id}`, {
                 method: 'DELETE'
             })
             .then(res => res.json())

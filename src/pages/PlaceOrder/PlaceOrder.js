@@ -22,7 +22,7 @@ function PlaceOrder() {
             userEamil: user.email, 
             ...data
         }
-        axios.post('http://localhost:5000/orders', order)
+        axios.post('https://arcane-bayou-05771.herokuapp.com/orders', order)
             .then(res => {
                 if (res.data.insertedId) {
                     setPlaced(true);

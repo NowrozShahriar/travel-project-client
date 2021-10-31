@@ -10,7 +10,7 @@ function MyOrders() {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/orders/${userId}`)
+        fetch(`https://arcane-bayou-05771.herokuapp.com/orders/${userId}`)
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [userId])
