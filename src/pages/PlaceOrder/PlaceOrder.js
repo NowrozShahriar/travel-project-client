@@ -14,8 +14,14 @@ function PlaceOrder() {
     const [placed, setPlaced] = useState(false);
 
     const onSubmit = data => {
-        const order = { serviceId: id, name: user.displayName, eamil: user.email, ...data}
-        console.log(order);
+        const order = { 
+            serviceId: id, 
+            status: 'Pending', 
+            userId: user.uid, 
+            userName: user.displayName, 
+            userEamil: user.email, 
+            ...data
+        }
         axios.post('http://localhost:5000/orders', order)
             .then(res => {
                 if (res.data.insertedId) {
@@ -26,7 +32,7 @@ function PlaceOrder() {
     }
 
     return (
-        <div className="order">
+        <div className="place-order">
             {
                 services.map(service => service._id === id && 
                 <div key={id}><h1>{service.name}</h1><p><span>Price: $</span>{service.price}</p></div>)
@@ -36,7 +42,7 @@ function PlaceOrder() {
                 {placed ? 
                 <><h2>Order placed successfully.</h2><p>Go to <strong>My Orders</strong> to see all of your orders.</p></> : 
                 <><p>{user.email}</p>
-                <textarea placeholder="Address" defaultValue="" {...register("address", {required: true})} />
+                <textarea placeholder="Address" defaultValue="" {...register("address")} />
                 <input type="number" placeholder="phone number" {...register("phone", {required: true})} />
                 <input type="submit" value="Place Order" /></>}
             </form>

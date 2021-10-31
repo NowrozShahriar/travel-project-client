@@ -5,12 +5,12 @@ import "./Header.css";
 
 function Header() {
     const { user, signIn, logOut } = useAuth();
-
+    // console.log(user);
     return (
         <div className="header">
             <Link to="/"><h2>Good Travel</h2></Link>
             {user?.email && <nav>
-                    <Link to="/my-orders">My Orders</Link>
+                    <Link to={`/my-orders/${user.uid}`}>My Orders</Link>
                     <Link to="/all-orders">All Orders</Link>
                     <Link to="/add-service">Add Service</Link>
                 </nav>

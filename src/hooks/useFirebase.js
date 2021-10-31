@@ -7,16 +7,20 @@ intializeAuth();
 
 const useFirebase = () => {
     const [user, setUser] = useState({});
+    const [isLoading, setIsLoading] = useState(true);
 
     const auth = getAuth();
     const provider = new GoogleAuthProvider();
 
     const signIn = () => {
+        setIsLoading(true);
         signInWithPopup(auth, provider)
-            .catch(() => console.log('Canceled'));
+            .catch(() => console.log('Canceled'))
+            .finally(() => setIsLoading(false));
     }
 
     const signInWithGoogle = () => {
+        setIsLoading(true);
         return signInWithPopup(auth, provider);
     };
 
@@ -27,19 +31,24 @@ const useFirebase = () => {
             } else {
                 setUser({});
             }
+            setIsLoading(false);
         });
         return () => unsubscribed;
     }, [auth]);
 
     const logOut = () => {
+        setIsLoading(true);
         signOut(auth)
             .then(() => {
                 setUser({})
             })
+            .finally(() => setIsLoading(false));
     }
 
     return {
         user,
+        isLoading,
+        setIsLoading,
         signIn,
         signInWithGoogle,
         logOut

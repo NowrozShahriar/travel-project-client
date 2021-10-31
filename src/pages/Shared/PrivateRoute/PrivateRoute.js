@@ -3,7 +3,10 @@ import { Route, Redirect } from 'react-router-dom';
 import useAuth from "../../../hooks/useAuth";
 
 function PrivateRoute({children, ...rest}) {
-    const { user } = useAuth();
+    const { user, isLoading } = useAuth();
+    if (isLoading) {
+        return <img width="100px" src="https://i.ibb.co/2c9qxBN/hug.gif" alt="" />
+    }
     return (
         <Route 
             {...rest} 

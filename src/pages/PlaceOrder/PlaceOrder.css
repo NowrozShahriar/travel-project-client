@@ -1,22 +1,22 @@
-.order form {
+.place-order form {
     display: flex;
     flex-direction: column;
     width: 300px;
     margin: 0 auto;
 }
 
-.order input, textarea {
+.place-order input, textarea {
     margin-bottom: 10px;
 }
 
-.order p {
+.place-order p {
     margin: 0 0 3px 0;
 }
 
-.order h1, h3 {
+.place-order h1, h3 {
     margin: 10px 0 0 0;
 }
 
-.order h2 {
+.place-order h2 {
     font-weight: 400;
 }

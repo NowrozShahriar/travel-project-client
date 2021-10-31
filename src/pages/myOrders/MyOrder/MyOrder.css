@@ -1,0 +1,22 @@
+.my-order {
+    display: flex;
+    align-items: center;
+    width: 600px;
+}
+
+.my-order img {
+    width: 200px;
+}
+
+.my-order div {
+    width: 200px;
+}
+
+@media only screen and (max-width: 560px) {
+    .my-order{
+        display: block;
+        width: auto;
+        margin-bottom: 30px;
+    }
+}
+

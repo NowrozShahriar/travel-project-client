@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import './App.css';
 import Header from './pages/Shared/Header/Header';
 import Main from './pages/home/Main/Main';
-import MyOrders from './pages/MyOrders/MyOrders';
-import AllOrders from './pages/AllOrders/AllOrders';
+import MyOrders from './pages/myOrders/MyOrders/MyOrders';
+import AllOrders from './pages/allOrders/AllOrders/AllOrders';
 import NotFound from './pages/NotFound/NotFound';
 import AddService from './pages/AddService/AddService';
 import AuthProvider from './contexts/AuthProvider';
@@ -21,7 +21,7 @@ function App() {
             <Route exact path={["/", "/home"]}>
               <Main></Main>
             </Route>
-            <PrivateRoute path="/my-orders">
+            <PrivateRoute path="/my-orders/:userId">
               <MyOrders></MyOrders>
             </PrivateRoute>
             <PrivateRoute path="/all-orders">
